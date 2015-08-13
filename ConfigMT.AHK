@@ -280,13 +280,14 @@ It seems that you are running anti-virus or backup software on the same machine 
 
 Can you please disable this kind of software from scanning the following locations on the machines where you have installed the EndPointSecurity application
 
-<:\Program Files\GFI\EndPointsy4.0>
+<:\Program Files\GFI\EndPointSecurity 6>
 
 <:\Program Files\Common Files\GFI>
 
 Also, can you please disable this kind of software from scanning the following locations/files on the machines where you have deployed the GFI EndPointSecurity Agent:
+
 C:\WINDOWS\system32\drivers\esecdrv.sys
-<:\Program Files\GFI\ 4.0 Agent>
+<:\Program Files\GFI\6.0 Agent>
 
 <:\Program Files\Common Files\GFI>
 )
