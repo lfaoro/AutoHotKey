@@ -99,25 +99,19 @@ Please send a reply to this case with the .ZIP file attached.
 NOTE: In case you're unable to run this command, your system might not be updated with the latest Windows patches. Please update your Windows Management Framework (requires System restart) and run the command again: http://www.microsoft.com/en-US/download/details.aspx?id=40855
 )
 
-::/newscript::
-(
-test
-)
-
-
-
-
 ; #################
 ; # Product names #
 ; #################
 
 ::/me::
-SendInput GFI MailEssentials
-return
+(
+GFI MailEssentials
+)
 
 ::/arc::
-SendInput Archiver
-return
+(
+GFI Archiver
+)
 
 ::/fm::
 SendInput FaxMaker
@@ -208,7 +202,7 @@ SendInput You can find your GFI FaxMaker Key in by going to: GFI FaxMaker Consol
 return
 
 ::/arclic::
-SendInput You can find your GFI Archiver Key in by going to: GFI MailArchiver website - Configuration - Change License Key - Edit License Key 
+SendInput You can find your GFI Archiver Key in by going to: GFI MailArchiver website - Configuration - Change License Key - Edit License Key
 return
 
 ::/wmlic::
@@ -224,7 +218,7 @@ SendInput You can find your GFI EventsManager Key in by going to: GFI EventsMana
 return
 
 ::/eseclic::
-SendInput You can find your GFI EndPointSecurity Key in by going to: GFI EndPointSecurity Console - General - Licensing 
+SendInput You can find your GFI EndPointSecurity Key in by going to: GFI EndPointSecurity Console - General - Licensing
 return
 
 ::/melic::
@@ -247,7 +241,7 @@ return
 ;<..\Program Files\GFI\FAXmaker>
 ;<..\Program Files\Common Files\GFI>
 ;<..\Inetpub\mailroot> if GFI FAXmaker is installed on a gateway machine.
-;<..\Program Files\Exchsrvr\Mailroot> if GFI FAXmaker is installed on the same machine as Microsoft Exchange 2000/2003. 
+;<..\Program Files\Exchsrvr\Mailroot> if GFI FAXmaker is installed on the same machine as Microsoft Exchange 2000/2003.
 ;<..\Program Files\Microsoft\Exchange Server\TransportRoles> if GFI FAXmaker is installed on the same machine as Microsoft Exchange 2007
 ;)
 ;return
@@ -264,17 +258,17 @@ return
 ;SendInput
 ;(
 ;It seems that you are running anti-virus or backup software on the same machine as EndPointSecurity? 3rd party anti-virus and backup software can ;make EndPointSecurity mal-function since they may deny EndPointSecurity access to files.
-; 
+;
 ;
 ;Can you please disable this kind of software from scanning the following locations on the machines where you have installed the EndPointSecurity ;application
 ;
-;<:\Program Files\GFI\EndPointsy4.0> 
+;<:\Program Files\GFI\EndPointsy4.0>
 ;
 ;<:\Program Files\Common Files\GFI>
 ;
 ;Also, can you please disable this kind of software from scanning the following locations/files on the machines where you have deployed the GFI ;EndPointSecurity Agent:
 ;C:\WINDOWS\system32\drivers\esecdrv.sys
-;<:\Program Files\GFI\ 4.0 Agent> 
+;<:\Program Files\GFI\ 4.0 Agent>
 ;
 ;<:\Program Files\Common Files\GFI>
 ;)
@@ -386,7 +380,7 @@ start C:\"Program Files (x86)"\GFI\MailEssentials\e2k7wiz.exe clean
    VarSetCapacity(Clip0, 0)      ; Free memory
 Return
 
-^#v::                            ; Text–only paste from ClipBoard
+^#v::                            ; Textï¿½only paste from ClipBoard
    Clip0 = %ClipBoardAll%
    ClipBoard = %ClipBoard%       ; Convert to text
    Send ^v                       ; For best compatibility: SendPlay
