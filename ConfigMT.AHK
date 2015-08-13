@@ -105,6 +105,8 @@ test
 )
 
 
+
+
 ; #################
 ; # Product names #
 ; #################
@@ -233,50 +235,50 @@ return
 ; # Exclusion Paths      #
 ; ########################
 
-::/meav::
-SendInput
-return
-::/arcav::
-SendInput
-return
-::/fmav::
-SendInput
-(
-<..\Program Files\GFI\FAXmaker>
-<..\Program Files\Common Files\GFI>
-<..\Inetpub\mailroot> if GFI FAXmaker is installed on a gateway machine.
-<..\Program Files\Exchsrvr\Mailroot> if GFI FAXmaker is installed on the same machine as Microsoft Exchange 2000/2003. 
-<..\Program Files\Microsoft\Exchange Server\TransportRoles> if GFI FAXmaker is installed on the same machine as Microsoft Exchange 2007
-)
-return
-::/lgav::
-SendInput
-return
-::/esmav::
-SendInput
-return
-::/wmav::
-SendInput
-return
-::/esecav::
-SendInput
-(It seems that you are running anti-virus or backup software on the same machine as EndPointSecurity? 3rd party anti-virus and backup software can make EndPointSecurity mal-function since they may deny EndPointSecurity access to files.
- 
+;::/meav::
+;SendInput
+;return
+;::/arcav::
+;SendInput
+;return
+;::/fmav::
+;SendInput
+;(
+;<..\Program Files\GFI\FAXmaker>
+;<..\Program Files\Common Files\GFI>
+;<..\Inetpub\mailroot> if GFI FAXmaker is installed on a gateway machine.
+;<..\Program Files\Exchsrvr\Mailroot> if GFI FAXmaker is installed on the same machine as Microsoft Exchange 2000/2003. 
+;<..\Program Files\Microsoft\Exchange Server\TransportRoles> if GFI FAXmaker is installed on the same machine as Microsoft Exchange 2007
+;)
+;return
+;::/lgav::
+;SendInput
+;return
+;::/esmav::
+;SendInput
+;return
+;::/wmav::
+;SendInput
+;return
+;::/esecav::
+;SendInput
+;(
+;It seems that you are running anti-virus or backup software on the same machine as EndPointSecurity? 3rd party anti-virus and backup software can ;make EndPointSecurity mal-function since they may deny EndPointSecurity access to files.
+; 
+;
+;Can you please disable this kind of software from scanning the following locations on the machines where you have installed the EndPointSecurity ;application
+;
+;<:\Program Files\GFI\EndPointsy4.0> 
+;
+;<:\Program Files\Common Files\GFI>
+;
+;Also, can you please disable this kind of software from scanning the following locations/files on the machines where you have deployed the GFI ;EndPointSecurity Agent:
+;C:\WINDOWS\system32\drivers\esecdrv.sys
+;<:\Program Files\GFI\ 4.0 Agent> 
+;
+;<:\Program Files\Common Files\GFI>
+;)
 
-Can you please disable this kind of software from scanning the following locations on the machines where you have installed the EndPointSecurity application:
-
-<:\Program Files\GFI\EndPointsy4.0> 
-
-<:\Program Files\Common Files\GFI>
-
-Also, can you please disable this kind of software from scanning the following locations/files on the machines where you have deployed the GFI EndPointSecurity Agent:
-C:\WINDOWS\system32\drivers\esecdrv.sys
-<:\Program Files\GFI\ 4.0 Agent> 
-
-<:\Program Files\Common Files\GFI>
-
-)
-return
 
 
 
