@@ -114,9 +114,9 @@ GFI Archiver
 )
 
 ::/fm::
-SendInput FaxMaker
-return
-
+(
+GFI FaxMaker 
+)
 ::/lg::
 SendInput LanGuard
 return
