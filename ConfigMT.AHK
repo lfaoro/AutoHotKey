@@ -99,6 +99,11 @@ Please send a reply to this case with the .ZIP file attached.
 NOTE: In case you're unable to run this command, your system might not be updated with the latest Windows patches. Please update your Windows Management Framework (requires System restart) and run the command again: http://www.microsoft.com/en-US/download/details.aspx?id=40855
 )
 
+::/newscript::
+(
+test
+)
+
 
 ; #################
 ; # Product names #
